@@ -1,0 +1,31 @@
+include ./menu-data.pug
+
+mixin item(hookah)
+  +e.LI.item
+    +e.item-top
+      +e.H4.heading «#{hookah.name}»
+      +e.price #{hookah.price} ₽
+    +e.item-bottom
+      p
+        span Добавки:
+        |
+        | #{hookah.features}
+      p
+        span Чаша:
+        |
+        | #{hookah.bowl}
+      p
+        span Крепость:
+        |
+        | #{hookah.strength}
+
+
++b.SECTION.menu(id="menu")
+  +e.inner.container
+    +e.H2.title Меню
+    include ./menu-top.pug
+
+    +e.bottom
+      +e.UL.list.list-reset
+        each hookah in hookahList
+          +item(hookah)

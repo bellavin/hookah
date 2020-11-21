@@ -1,0 +1,12 @@
+mixin item(date, txt)
+  +e.LI.item
+    +e.TIME.date #{date}
+    p #{txt}
+
++b.SECTION.news(id="news")
+  +e.inner.container
+    +e.H2.title Новости
+    +e.UL.list.list-reset
+      +item("8 апреля", "Наш курительный клуб ежедневно работает с 16:00")
+      +item("24 марта", "Дорогие гости, по выходным наш курительный клуб работает до 4 утра")
+      +item("12 марта", "Готовимся к вечеру с сигарами Davidoff")

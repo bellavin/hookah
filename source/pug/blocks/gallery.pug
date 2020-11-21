@@ -1,0 +1,12 @@
+mixin item(src)
+  +e.LI.item
+    img(src= src)
+
++b.SECTION.gallery(id="gallery")
+  +e.inner.container
+    +e.H2.title Интерьер
+    +e.UL.list.list-reset
+      +item("img/slides/gallery-1.jpg")
+      +item("img/slides/gallery-2.jpg")
+      +item("img/slides/gallery-3.jpg")
+      +item("img/slides/gallery-4.jpg")

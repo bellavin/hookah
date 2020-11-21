@@ -1,0 +1,62 @@
+.burger {
+  position: relative;
+  display: table;
+  width: 40px;
+  height: 24px;
+  outline: none;
+
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin-top: -2px;
+
+    background-color: gray;
+
+    transition-property: transform;
+    transition-duration: 150ms;
+  }
+
+  &__inner::before,
+  &__inner::after {
+    content: "";
+    position: inherit;
+
+    display: inherit;
+    width: inherit;
+    height: inherit;
+
+    background-color: inherit;
+  }
+
+  &__inner::before {
+    top: -10px;
+    transition: top 150ms 150ms, opacity 150ms;
+  }
+
+  &__inner::after {
+    bottom: -10px;
+    transition: bottom 150ms 150ms, transform 150ms;
+  }
+
+  &.active &__inner {
+    transform: rotate(45deg);
+    transition-delay: 150ms;
+  }
+
+  &.active &__inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 150ms, opacity 150ms 150ms;
+  }
+
+  &.active &__inner::after {
+    bottom: 0;
+    transform: rotate(90deg);
+    transition: bottom 150ms, transform 150ms 150ms;
+  }
+}

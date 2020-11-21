@@ -1,0 +1,30 @@
+.header-nav {
+
+  &__inner {
+    position: relative;
+  }
+
+  &__links-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    background-color: #30333B;
+  }
+
+  &__burger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: transparentize(black, 0.3);
+  }
+}

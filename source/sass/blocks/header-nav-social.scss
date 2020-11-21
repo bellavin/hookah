@@ -1,0 +1,21 @@
+.header-nav-social {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item ~ &__item {
+    margin-left: 20px;
+  }
+
+  &__link {
+    display: flex;
+    height: 100%;
+  }
+
+  &__link svg {
+    display: block;
+    margin: auto;
+    fill: #C8CDD8;
+  }
+}

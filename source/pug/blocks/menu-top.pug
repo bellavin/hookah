@@ -1,0 +1,10 @@
+mixin menu-tab(btn)
+  +e.LI.item
+    +e.btn.btn.btn-reset #{btn}
+
++b.menu-top.menu__top
+  +e.UL.list.list-reset
+    +menu-tab("Фирменные кальяны")
+    +menu-tab("Сигары и сигарилы")
+    +menu-tab("Классические кальяны")
+  +e.img

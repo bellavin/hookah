@@ -1,0 +1,37 @@
+.header-nav {
+  &__links-container {
+    transform: scaleY(0);
+    transform-origin: center top;
+
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-delay: 250ms;
+  }
+
+  &__menu,
+  &__social {
+    opacity: 0;
+
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-delay: 0ms;
+  }
+
+  &__overlay {
+  }
+
+  &.active &__links-container {
+    transform: scaleY(1);
+    transition-delay: 0ms;
+  }
+
+  &.active &__menu,
+  &.active &__social {
+    opacity: 1;
+    transition-delay: 250ms;
+  }
+
+  &.active &__overlay {
+
+  }
+}

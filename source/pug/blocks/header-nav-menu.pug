@@ -1,0 +1,13 @@
+mixin item(txt, src)
+  +e.LI.item
+    +e.link(href= src) #{txt}
+
+
++b.header-nav-menu
+  +e.UL.list.list-reset
+    +item("О клубе", "#about")
+    +item("Интерьер", "#gallery")
+    +item("Меню", "#menu")
+    +item("Преимущества", "#features")
+    +item("Новости", "#news")
+    +item("Контакты", "#contacts")

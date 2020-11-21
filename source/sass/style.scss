@@ -1,0 +1,34 @@
+// Vendor
+//---------------------------------
+
+@import "vendor/normalize";
+@import "vendor/swiper";
+
+// Global
+//---------------------------------
+
+@import "variables";
+@import "mixins";
+@import "global/fonts";
+@import "global/reboot";
+@import "global/utils";
+@import "global/layout";
+
+// UI-kit
+//---------------------------------
+
+@import "ui-kit/burger";
+
+// Blocks
+//---------------------------------
+
+@import "blocks/modal";
+@import "blocks/header-nav";
+@import "blocks/header-nav-logo";
+@import "blocks/header-nav-social";
+@import "blocks/header-nav-menu";
+
+// Animation
+//---------------------------------
+
+@import "animation/header-nav";
