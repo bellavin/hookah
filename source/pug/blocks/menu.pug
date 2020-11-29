@@ -22,8 +22,9 @@ mixin item(hookah)
 
 +b.SECTION.menu(id="menu")
   +e.inner.container
-    +e.H2.title Меню
-    include ./menu-top.pug
+    +e.top
+      +e.H2.title Меню
+      include ./menu-tabs.pug
 
     +e.bottom
       +e.UL.list.list-reset

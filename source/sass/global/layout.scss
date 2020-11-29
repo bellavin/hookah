@@ -30,19 +30,21 @@
 }
 
 .container {
-  max-width: $viewport--sm;
-  max-width: $viewport--xl;
-  box-sizing: border-box;
-  margin: 0 auto;
+  min-width: $viewport--sm;
+  max-width: #{15 + 1200 + 15}px;
   padding-left: 15px;
   padding-right: 15px;
+  box-sizing: border-box;
+  margin: 0 auto;
 
   @media (min-width: $viewport--md) {
+    max-width: #{20 + 1200 + 20}px;
     padding-left: 20px;
     padding-right: 20px;
   }
 
   @media (min-width: $viewport--xl) {
+    max-width: #{120 + 1200 + 120}px;
     padding-left: 120px;
     padding-right: 120px;
   }

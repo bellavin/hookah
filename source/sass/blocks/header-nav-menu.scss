@@ -1,7 +1,59 @@
 .header-nav-menu {
   &__link {
+    position: relative;
     display: block;
+    padding: 12px 0 11px;
     color: #EDF0F4;
+    font-size: 15px;
     text-align: center;
+
+    transition: color 150ms;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: white;
+    outline: none;
+  }
+
+  &__link:active {
+    opacity: 0.7;
+  }
+
+  @media (min-width: $viewport--lg) {
+    padding: 21px 0;
+
+    &__list {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      margin-left: 34px;
+    }
+
+    &__link::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: auto;
+      right: 0;
+
+      display: block;
+      height: 2px;
+      width: 0;
+      background-color: $brown;
+
+      transition: width 150ms;
+    }
+
+    &__link:hover::after,
+    &__link:focus::after {
+      left: 0;
+      right: auto;
+
+      width: 100%;
+    }
   }
 }

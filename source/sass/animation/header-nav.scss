@@ -1,5 +1,5 @@
 .header-nav {
-  &__links-container {
+  &__links-wrapper {
     transform: scaleY(0);
     transform-origin: center top;
 
@@ -20,7 +20,7 @@
   &__overlay {
   }
 
-  &.active &__links-container {
+  &.active &__links-wrapper {
     transform: scaleY(1);
     transition-delay: 0ms;
   }
@@ -33,5 +33,84 @@
 
   &.active &__overlay {
 
+  }
+
+  @media (min-width: $viewport--md) {
+    &__links-wrapper {
+      transform: initial;
+      transform-origin: initial;
+
+      transition: initial;
+    }
+
+    &__menu,
+    &__social {
+      opacity: initial;
+
+      transition: initial;
+    }
+
+    &.active &__links-wrapper {
+      transform: initial;
+      transition-delay: initial;
+    }
+
+    &.active &__menu,
+    &.active &__social {
+      opacity: initial;
+      transition: initial;
+    }
+
+    &__menu {
+      transform: scaleY(0);
+      transform-origin: center top;
+
+      transition-property: transform;
+      transition-duration: 250ms;
+      transition-delay: 250ms;
+    }
+
+    &.active &__menu {
+      transform: scaleY(1);
+      transition-delay: 0ms;
+    }
+
+    .header-nav-menu {
+      opacity: 0;
+
+      transition-property: opacity;
+      transition-duration: 250ms;
+      transition-delay: 0ms;
+    }
+
+    &.active .header-nav-menu {
+      opacity: 1;
+      transition-delay: 250ms;
+    }
+  }
+
+  @media (min-width: $viewport--lg) {
+    &__menu {
+      transform: initial;
+      transform-origin: initial;
+
+      transition: initial;
+    }
+
+    &.active &__menu {
+      transform: initial;
+      transition: initial;
+    }
+
+    .header-nav-menu {
+      opacity: initial;
+
+      transition: initial;
+    }
+
+    &.active .header-nav-menu {
+      opacity: initial;
+      transition-delay: initial;
+    }
   }
 }
