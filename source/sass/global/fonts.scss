@@ -50,39 +50,16 @@
        url('../fonts/merriweather-v22-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
        url('../fonts/merriweather-v22-latin_cyrillic-700.svg#Merriweather') format('svg'); /* Legacy iOS */
 }
+/* merriweather-900 - latin_cyrillic */
 @font-face {
-  font-family: "Line Awesome Brands";
-  font-style: normal;
-  font-weight: normal;
-  font-display: auto;
-  src: url("../fonts/la-brands-400.eot");
-  src: url("../fonts/la-brands-400.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/la-brands-400.woff2") format("woff2"),
-    url("../fonts/la-brands-400.woff") format("woff"),
-    url("../fonts/la-brands-400.ttf") format("truetype"),
-    url("../fonts/la-brands-400.svg#lineawesome") format("svg");
-}
-@font-face {
-  font-family: "Line Awesome Free";
-  font-style: normal;
-  font-weight: 400;
-  font-display: auto;
-  src: url("../fonts/la-regular-400.eot");
-  src: url("../fonts/la-regular-400.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/la-regular-400.woff2") format("woff2"),
-    url("../fonts/la-regular-400.woff") format("woff"),
-    url("../fonts/la-regular-400.ttf") format("truetype"),
-    url("../fonts/la-regular-400.svg#lineawesome") format("svg");
-}
-@font-face {
-  font-family: "Line Awesome Free";
+  font-family: 'Merriweather';
   font-style: normal;
   font-weight: 900;
-  font-display: auto;
-  src: url("../fonts/la-solid-900.eot");
-  src: url("../fonts/la-solid-900.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/la-solid-900.woff2") format("woff2"),
-    url("../fonts/la-solid-900.woff") format("woff"),
-    url("../fonts/la-solid-900.ttf") format("truetype"),
-    url("../fonts/la-solid-900.svg#lineawesome") format("svg");
+  src: url('../fonts/merriweather-v22-latin_cyrillic-900.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/merriweather-v22-latin_cyrillic-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/merriweather-v22-latin_cyrillic-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/merriweather-v22-latin_cyrillic-900.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/merriweather-v22-latin_cyrillic-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/merriweather-v22-latin_cyrillic-900.svg#Merriweather') format('svg'); /* Legacy iOS */
 }

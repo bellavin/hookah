@@ -1,32 +1,25 @@
-include ./menu-data.pug
+mixin item(i)
+  +e.LI.item(data-menu-category= i)
+    +b.menu-category.menu__category.swiper-container
+      +e.UL.list.list-reset.swiper-wrapper
+        block
 
-mixin item(hookah)
-  +e.LI.item
-    +e.item-top
-      +e.H4.heading «#{hookah.name}»
-      +e.price #{hookah.price} ₽
-    +e.item-bottom
-      p
-        span Добавки:
-        |
-        | #{hookah.features}
-      p
-        span Чаша:
-        |
-        | #{hookah.bowl}
-      p
-        span Крепость:
-        |
-        | #{hookah.strength}
-
-
-+b.SECTION.menu(id="menu")
++b.SECTION.menu(id="menu").js-menu
   +e.inner.container
     +e.top
       +e.H2.title Меню
-      include ./menu-tabs.pug
+      include ./menu-tab.pug
+      +e.arrows
+        +e.BUTTON.arrow.slider-arrow--prev.btn-reset.js-menu-arrow-prev
+          +svg("#icon-arrow", 9, 15)
+        +e.BUTTON.arrow.slider-arrow--next.btn-reset.js-menu-arrow-next
+          +svg("#icon-arrow", 9, 15)
 
     +e.bottom
       +e.UL.list.list-reset
-        each hookah in hookahList
-          +item(hookah)
+        +item(0)
+          include ./menu-category-hookah.pug
+        +item(1)
+          include ./menu-category-cigar.pug
+        +item(2)
+          include ./menu-category-hookah-2.pug

@@ -1,0 +1,90 @@
+.header-bottom {
+  margin-top: 77px;
+
+  &__item {
+    margin-top: 19px;
+    padding-left: 25px;
+    font-size: 14px;
+    color: #C8CDD8;
+  }
+
+  &__item--phone,
+  &__item--schedule,
+  &__item--address {
+    position: relative;
+    font-size: 14px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+
+      display: block;
+      width: 25px;
+
+      background-repeat: no-repeat;
+      background-position-x: left;
+    }
+  }
+
+  &__item--phone {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+
+  &__item--phone::before {
+    background-image: url(../img/svg/icon-phone.svg);
+    background-position-y: 2px;
+  }
+
+  &__item--schedule::before {
+    background-image: url(../img/svg/icon-clock.svg);
+    background-position-y: 3px;
+  }
+
+  &__item--address::before {
+    background-image: url(../img/svg/icon-point.svg);
+    background-position-y: 1px;
+  }
+
+  &__item p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    white-space: nowrap;
+  }
+
+  &__item a {
+    color: inherit;
+  }
+
+  @media (min-width: $viewport--md) {
+    margin-top: 110px;
+
+    &__inner {
+      display: flex;
+    }
+
+    &__item {
+      margin-top: 0;
+    }
+
+    &__item ~ &__item {
+      margin-left: 65px;
+    }
+  }
+
+  @media (min-width: $viewport--lg) {
+    margin-top: 85px;
+
+    &__inner {
+      position: relative;
+      width: min-content;
+      padding-top: 30px;
+
+      border-top: 1px solid #C8CDD8;
+    }
+  }
+}

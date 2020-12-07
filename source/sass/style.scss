@@ -18,6 +18,8 @@
 //---------------------------------
 
 @import "ui-kit/burger";
+@import "ui-kit/slider-arrow";
+@import "ui-kit/scroll-btn";
 
 // Blocks
 //---------------------------------
@@ -32,8 +34,11 @@
 @import "blocks/header-bottom";
 
 @import "blocks/menu";
+@import "blocks/menu-tab";
+@import "blocks/menu-category";
 
 // Animation
 //---------------------------------
 
 @import "animation/header-nav";
+@import "animation/menu";

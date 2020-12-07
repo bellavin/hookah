@@ -1,27 +1,44 @@
 -
-  const hookahList = [
+  const list = [
     {
-      id: 1,
       name: "Баунти",
       price: "3000",
       features: "шоколад, молоко, кокосовый сироп",
       bowl: "ананас",
-      strength: "средняя",
+      strength: "средняя"
     },
     {
-      id: 2,
       name: "Мохито",
       price: "3000",
       features: "мята, лайм, белый ром и много-много льда",
       bowl: "яблоко, апельсин, грейпфрут",
-      strength: "крепкий",
+      strength: "крепкий"
     },
     {
-      id: 3,
       name: "Пина колада",
       price: "3000",
       features: "молоко, ананасовый сок, кокосовый сироп, лед",
       bowl: "ананас",
-      strength: "средняя",
+      strength: "средняя"
     }
   ]
+
+each item in list
+  +e.LI.item.swiper-slide
+    +e.text
+      +e.top
+        h4 «#{item.name}»
+          mark #{item.price} ₽
+      +e.bottom
+        p
+          b Добавки:
+          |
+          | #{item.features}
+        p
+          b Чаша:
+          |
+          | #{item.bowl}
+        p
+          b Крепость:
+          |
+          | #{item.strength}

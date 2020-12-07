@@ -1,0 +1,54 @@
+.header-middle {
+  margin-top: 35px;
+
+  &__title {
+    position: relative;
+    margin: 0;
+    color: white;
+    font-size: 38px;
+    line-height: 1.45;
+    padding-top: 23px;
+    padding-bottom: 24px;
+  }
+
+  &__title span {
+    position: relative;
+  }
+
+  &__title::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    border: 7px solid $brown;
+  }
+
+  @media (min-width: $viewport--md) {
+    margin-top: 80px;
+
+    &__title {
+      padding-top: 63px;
+      padding-bottom: 70px;
+      font-size: 50px;
+    }
+
+    &__title::before {
+      max-width: 386px;
+    }
+  }
+
+  @media (min-width: $viewport--lg) {
+    margin-top: 105px;
+
+    &__title {
+      max-width: 800px;
+      padding-top: 85px;
+      padding-bottom: 98px;
+      font-weight: bold;
+      font-size: 58px;
+    }
+  }
+}

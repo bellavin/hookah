@@ -1,0 +1,32 @@
+
+.slider-arrow {
+  display: block;
+  width: 34px;
+  padding-top: 13px;
+  padding-bottom: 9px;
+
+  color: #AEB2BA;
+  text-align: center;
+
+  outline: none;
+  border: 1px solid;
+  transition: color 250ms;
+
+  &:hover,
+  &:focus {
+    color: $gray;
+  }
+}
+
+.slider-arrow svg {
+  fill: #8E9199;
+  transition: fill 250ms;
+}
+
+.slider-arrow:hover svg {
+  fill: $black;
+}
+
+.slider-arrow--prev svg {
+  transform: scale(-1, 1);
+}

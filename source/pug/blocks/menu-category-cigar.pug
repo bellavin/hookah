@@ -1,0 +1,48 @@
+-
+  const list = [
+    {
+      name: "Куба",
+      list: [
+        "Cohiba Panatelas",
+        "Cohiba Siglo II",
+        "Cohiba Siglo IV",
+        "Cohiba Siglo V",
+        "Cohiba Robustos",
+        "H. Upmann Magnum",
+        "Hoyo De Mont. Epicure №",
+        "Montecristo №4",
+        "Partagas Serie №4",
+        "Romeo & Julieta Churchliss.",
+        "Romeo & Julieta №2"
+      ]
+    },
+    {
+      name: "Доминикана",
+      list: [
+        "CT Reserva Decadencia Churchill",
+        "Arturo Fuente Anejo №77 Shark",
+        "Davidoff Escurio Gran Perfecto",
+        "Davidoff WSC Churchill",
+        "Zino Platinum XS",
+        "Zino Platinum Barrel",
+        "Macanudo Cafe Ascots",
+        "Macanudo Maduro Ascots"
+      ]
+    },
+    {
+      name: "Никарагуа",
+      list: [
+        "Nub Sun Grown 460 Tubos"
+      ]
+    }
+  ]
+
+each item in list
+  +e.LI.item.swiper-slide
+    +e.text
+      +e.top
+        h4 #{item.name}
+      +e.bottom
+        ul
+          each cigar in item.list
+            li #{cigar}

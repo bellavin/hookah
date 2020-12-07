@@ -1,0 +1,36 @@
+.menu-tab {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__btn {
+    padding: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: $black;
+    outline: none;
+    transition-property: color, background-color;
+    transition-duration: 300ms;
+    transition-delay: 0ms, 150ms;
+  }
+
+  &__btn:hover:not(.active),
+  &__btn:focus:not(.active) {
+    color: #E3E5EA;
+    background-color: $brown-2;
+    transition-delay: 150ms, 0ms;
+  }
+
+  &__btn.active {
+    color: #E3E5EA;
+    background-color: $brown;
+  }
+
+  @media (min-width: $viewport--md) {}
+  @media (min-width: $viewport--lg) {
+    &__btn {
+      font-size: 18px;
+    }
+  }
+}

@@ -43,7 +43,11 @@ gulp.task(`css`, function () {
         grid: true,
       })]))
       .pipe(gulp.dest(`build/css`))
-      .pipe(csso())
+      // .pipe(csso(
+      //   {
+      //     restructure: false
+      //   }
+      // ))
       .pipe(rename(`style.min.css`))
       .pipe(sourcemap.write(`.`))
       .pipe(gulp.dest(`build/css`))

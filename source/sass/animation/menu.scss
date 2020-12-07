@@ -1,0 +1,13 @@
+.menu {
+  &__item {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+  }
+
+  &__item.active,
+  &__item.visually-hidden {
+    opacity: 0;
+    transition-timing-function: ease-out;
+    // background-color: green;
+  }
+}

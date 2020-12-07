@@ -1,0 +1,9 @@
+mixin tab-item(btn, i)
+  +e.LI.item
+    +e.BUTTON.btn.btn.btn-reset(data-menu-tab= i) #{btn}
+
++b.menu-tab.menu__tab
+  +e.UL.list.list-reset
+    +tab-item("Фирменные кальяны", 0)
+    +tab-item("Сигары и сигарилы", 1)
+    +tab-item("Классические кальяны", 2)

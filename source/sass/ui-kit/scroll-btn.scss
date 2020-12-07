@@ -1,0 +1,20 @@
+.scroll-btn.active {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1000;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: $brown;
+
+  transition: background-color 300ms;
+
+
+  &:hover,
+  &:focus {
+    background-color: $brown-2;
+    outline: none;
+  }
+}
