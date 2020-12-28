@@ -1,3 +1,5 @@
+import {throttle} from '../utils/throttle';
+
 const scrollBtn = () => {
   const elem = document.querySelector(`.js-scroll-btn`);
 
@@ -6,15 +8,17 @@ const scrollBtn = () => {
     const scrollHandler = () => {
       const scrolled = window.pageYOffset;
       const coords = document.documentElement.clientHeight;
-      const isActive = elem.classList.contains(`active`);
+      const isHidden = elem.classList.contains(`visually-hidden`);
 
-      if (scrolled > coords && !isActive) {
-        elem.classList.add(`active`);
+      if (scrolled > coords && isHidden) {
+        elem.classList.remove(`visually-hidden`);
       }
-      if (scrolled < coords && isActive) {
-        elem.classList.remove(`active`);
+      if (scrolled < coords && !isHidden) {
+        elem.classList.add(`visually-hidden`);
       }
     }
+
+    const throttlingScrollHandler = throttle(scrollHandler, 2000);
 
     const scroll = () => {
       if (window.pageYOffset > 0) {
@@ -24,7 +28,7 @@ const scrollBtn = () => {
     }
 
     elem.addEventListener(`click`, scroll);
-    window.addEventListener(`scroll`, scrollHandler);
+    window.addEventListener(`scroll`, throttlingScrollHandler);
   }
 }
 

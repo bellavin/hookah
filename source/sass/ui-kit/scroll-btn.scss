@@ -1,4 +1,8 @@
-.scroll-btn.active {
+.scroll-btn.visually-hidden {
+  opacity: 0;
+}
+
+.scroll-btn {
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -8,13 +12,19 @@
   height: 40px;
 
   background-color: $brown;
+  opacity: 1;
 
-  transition: background-color 300ms;
-
+  transition-property: background-color, opacity;
+  transition-duration: 300ms;
 
   &:hover,
   &:focus {
     background-color: $brown-2;
     outline: none;
   }
+}
+
+.scroll-btn svg {
+  fill: $white;
+  transform: rotate(-90deg) translate(-1px, -1px);
 }

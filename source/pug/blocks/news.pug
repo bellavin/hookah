@@ -1,12 +1,20 @@
-mixin item(date, txt)
-  +e.LI.item
+mixin item(src, date, txt)
+  +e.LI.item.swiper-slide
+    img(src= src)
     +e.TIME.date #{date}
-    p #{txt}
+    +e.txt #{txt}
 
-+b.SECTION.news(id="news")
++b.SECTION.news.js-news(id="news")
   +e.inner.container
-    +e.H2.title Новости
-    +e.UL.list.list-reset
-      +item("8 апреля", "Наш курительный клуб ежедневно работает с 16:00")
-      +item("24 марта", "Дорогие гости, по выходным наш курительный клуб работает до 4 утра")
-      +item("12 марта", "Готовимся к вечеру с сигарами Davidoff")
+    +e.top
+      +e.H2.title Новости
+      +e.arrows
+        +e.BUTTON.arrow.slider-arrow--prev.btn-reset.js-news-arrow-prev
+          +svg("#icon-arrow", 9, 15)
+        +e.BUTTON.arrow.slider-arrow--next.btn-reset.js-news-arrow-next
+          +svg("#icon-arrow", 9, 15)
+    .swiper-container
+      +e.UL.list.list-reset.swiper-wrapper
+        +item("img/slides/news-1.jpg", "8 апреля", "Наш курительный клуб ежедневно работает с 16:00")
+        +item("img/slides/news-2.jpg", "24 марта", "Дорогие гости, по выходным наш курительный клуб работает до 4 утра")
+        +item("img/slides/news-3.jpg", "12 марта", "Готовимся к вечеру с сигарами Davidoff")

@@ -1,18 +1,19 @@
 +b.SECTION.contacts(id="contacts")
   +e.inner.container
-    +e.right
-      +e.H2.title Контакты
-      +e.contacts
-        +e.item--phone
-          p
-            a(href="tel:+73432989888") +7 (343) 298-98-88
-        +e.item--schedule
-          p вс-чт с 16:00 до 00:00
-          p пт-сб с 16:00 до 04:00
-        +e.item--address
-          p Екатеринбург,
-          p БЦ Высоцкий, 50 этаж
-
-    +e.left
-      +e.map
-        img(src="img/content/contacts-map.jpg")
+    +e.H2.title Контакты
+      +svg("#contacts-img", 100, 103)
+    +e.contacts
+      +e.item--phone
+        p
+          a(href="tel:+73432989888") +7 (343) 298-98-88
+      +e.item--address
+        p Екатеринбург, ул. Малышева 51,
+        p БЦ Высоцкий, 50 этаж
+      +e.item--schedule
+        p вс-чт с 16:00 до 00:00
+        p пт-сб с 16:00 до 04:00
+    +e.social
+      +e.BUTTON.btn--fb.btn-reset Facebook
+      +e.BUTTON.btn--inst.btn-reset Instagram
+  +e.map
+    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.567687014352!2d60.612156616167205!3d56.83620581537962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16e8ee06267d7%3A0xa64bcd395e8a4b63!2sDym%20Kudryavyy!5e0!3m2!1sen!2sru!4v1608818440172!5m2!1sen!2sru" width="100%" height="460" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")

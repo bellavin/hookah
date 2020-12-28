@@ -13,10 +13,12 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/layout";
+// @import "global/debug";
 
 // UI-kit
 //---------------------------------
 
+@import "ui-kit/btn";
 @import "ui-kit/burger";
 @import "ui-kit/slider-arrow";
 @import "ui-kit/scroll-btn";
@@ -33,9 +35,17 @@
 @import "blocks/header-middle";
 @import "blocks/header-bottom";
 
+@import "blocks/about";
+@import "blocks/gallery";
+@import "blocks/features";
+
 @import "blocks/menu";
 @import "blocks/menu-tab";
 @import "blocks/menu-category";
+
+@import "blocks/news";
+@import "blocks/more";
+@import "blocks/contacts";
 
 // Animation
 //---------------------------------

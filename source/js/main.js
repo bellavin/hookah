@@ -5,6 +5,8 @@ import {page} from './modules/page';
 import {initModals} from './modules/init-modals';
 import {headerNav} from './modules/header-nav';
 import {menu} from './modules/menu';
+import {gallery} from './modules/gallery';
+import {news} from './modules/news';
 import {scrollBtn} from './modules/scroll-btn';
 
 // Utils
@@ -16,8 +18,10 @@ scrollTo();
 // Modules
 // ---------------------------------
 
-page();
 initModals();
+page();
+gallery();
+news();
 headerNav();
 menu();
 scrollBtn();

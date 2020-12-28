@@ -1,14 +1,14 @@
 .menu {
   &__inner {
     padding-top: 75px;
+    padding-bottom: 54px;
   }
 
   &__top {
     position: relative;
   }
 
-  &__top::before {
-    content: "";
+  &__top > svg {
     position: absolute;
     top: -56px;
     right: 0;
@@ -16,11 +16,6 @@
     display: block;
     width: 125px;
     height: 125px;
-
-    background-image: url(../img/bg/menu-bg.png);
-    background-repeat: no-repeat;
-    background-position: 0 100%;
-    background-size: contain;
   }
 
   &__bottom {
@@ -65,11 +60,15 @@
   }
 
   @media (min-width: $viewport--md) {
+    &__inner {
+      padding-bottom: 80px;
+    }
+
     &__top {
       border-bottom: 1px solid #BDC4CF;
     }
 
-    &__top::before {
+    &__top > svg {
       top: -58px;
       width: 135px;
       height: 135px;
@@ -92,9 +91,10 @@
   @media (min-width: $viewport--lg) {
     &__inner {
       padding-top: 113px;
+      padding-bottom: 120px;
     }
 
-    &__top::before {
+    &__top > svg {
       top: -58px;
       width: 188px;
       height: 188px;

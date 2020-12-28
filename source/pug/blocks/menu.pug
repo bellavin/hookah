@@ -9,6 +9,7 @@ mixin item(i)
     +e.top
       +e.H2.title Меню
       include ./menu-tab.pug
+      +svg("#menu-img", 125, 125)
       +e.arrows
         +e.BUTTON.arrow.slider-arrow--prev.btn-reset.js-menu-arrow-prev
           +svg("#icon-arrow", 9, 15)

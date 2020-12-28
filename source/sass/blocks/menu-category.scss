@@ -1,5 +1,8 @@
 .menu-category {
-  &__list {
+  cursor: grab;
+
+  &:active {
+    cursor: grabbing;
   }
 
   &__item {

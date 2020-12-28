@@ -32,13 +32,13 @@ const headerNav = () => {
 
     // Set listeners
     //---------------------------------
-    if (navElem && toggleElem) {
+    if (toggleElem) {
       toggleElem.addEventListener(`click`, () => {
         toggleNav();
       });
     }
 
-    if (navElem && overlayElem) {
+    if (overlayElem) {
       overlayElem.addEventListener(`click`, () => {
         hideNav();
       });

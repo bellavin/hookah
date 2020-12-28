@@ -1,0 +1,32 @@
+.btn {
+  display: table;
+  padding: 21px 30px 22px;
+  color: white;
+  font-size: 15px;
+  background-color: $brown;
+  transition: background-color 150ms;
+
+  &:hover,
+  &:focus {
+    background-color: $brown-2;
+  }
+
+  &--arrow {
+    position: relative;
+    padding-right: 54px;
+  }
+
+  &--arrow::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    display: block;
+    width: 46px;
+    height: 100%;
+    background-image: url(../img/svg/icon-btn-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+  }
+}
