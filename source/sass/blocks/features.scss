@@ -1,0 +1,134 @@
+.features {
+  &__inner {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  &__content {
+    max-width: 664px;
+    min-height: 448px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    color: white;
+    background-color: #30333B;
+  }
+
+  &__bg {
+    margin: 0 auto;
+    max-width: 664px;
+  }
+
+  &__bg img {
+    display: block;
+    width: 100%;
+    height: 182px;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    padding-right: 150px;
+    font-size: 28px;
+  }
+
+  &__title svg {
+    position: absolute;
+    right: 0;
+    top: -7px;
+
+    display: block;
+  }
+
+  &__list {
+    margin-top: 56px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 42px;
+    font-size: 15px;
+    line-height: 1.56;
+  }
+
+  &__item ~ &__item {
+    margin-top: 39px;
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+    width: 18px;
+    height: 26px;
+
+    background-image: url(../img/svg/marker.svg);
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $viewport--md) {
+    position: relative;
+    padding-bottom: 262px;
+
+    &__content {
+      padding-right: 65px;
+      padding-left: 65px;
+    }
+
+    &__title svg {
+      right: -22px;
+      top: -9px;
+
+      width: 171px;
+      height: 54px;
+    }
+
+    &__bg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: -1;
+
+      max-width: 768px;
+    }
+
+    &__bg img {
+      height: 530px;
+    }
+  }
+
+  @media (min-width: $viewport--lg) {
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    &__content {
+      margin-right: 120px;
+      padding-bottom: 86px;
+    }
+
+    &__title {
+      font-size: 36px;
+      padding-right: 170px;
+    }
+
+    &__bg {
+      top: 0;
+      bottom: 0;
+      right: calc(50%);
+      margin-right: -190px;
+      left: -180px;
+      max-width: 100%;
+    }
+
+    &__bg img {
+      height: 100%;
+    }
+  }
+}

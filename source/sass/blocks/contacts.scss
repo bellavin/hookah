@@ -1,0 +1,230 @@
+.contacts {
+  &__inner {
+    padding-top: 75px;
+  }
+
+  &__map {
+    margin-top: 60px;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    padding-right: 150px;
+    font-size: 28px;
+  }
+
+  &__title svg {
+    position: absolute;
+    top: -19px;
+    right: 5px;
+  }
+
+  &__contacts {
+    margin-top: 50px;
+  }
+
+  &__item {
+    font-size: 15px;
+  }
+
+  &__item a {
+    font-weight: bold;
+  }
+
+  &__item p {
+    margin: 0;
+  }
+
+  &__item p ~ p {
+    margin-top: 5px;
+  }
+
+  &__item ~ &__item {
+    margin-top: 31px;
+  }
+
+  &__item--phone,
+  &__item--address,
+  &__item--schedule {
+    position: relative;
+    padding-left: 27px;
+  }
+
+  &__item--phone::before,
+  &__item--address::before,
+  &__item--schedule::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+    width: 50px;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  &__item--phone::before {
+    background-image: url(../img/svg/icon-phone.svg);
+  }
+
+  &__item--address::before {
+    background-image: url(../img/svg/icon-point.svg);
+  }
+
+  &__item--schedule::before {
+    background-image: url(../img/svg/icon-clock.svg);
+    background-position-y: 2px;
+  }
+
+  &__social {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 47px;
+    margin-left: -10px;
+  }
+
+  &__btn {
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 21px 24px;
+    font-size: 15px;
+    color: white;
+    background-color: #30333B;
+    transition: background-color 150ms;
+  }
+
+  &__btn:hover,
+  &__btn:focus {
+    background-color: #444853;
+  }
+
+  &__btn--fb,
+  &__btn--inst {
+    position: relative;
+    padding-left: 50px;
+  }
+
+  &__btn--fb::before,
+  &__btn--inst::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+    width: 50px;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__btn--fb::before {
+    background-image: url(../img/svg/icon-fb.svg);
+  }
+
+  &__btn--inst::before {
+    background-image: url(../img/svg/icon-inst.svg);
+  }
+
+  &__map iframe {
+    display: block;
+  }
+
+  @media (min-width: $viewport--md) {
+    &__inner {
+      padding-top: 48px;
+    }
+
+    &__contacts {
+      display: flex;
+    }
+
+    &__social {
+      margin-top: 54px;
+      margin-left: -15px;
+    }
+
+    &__btn {
+      margin-left: 15px;
+      padding-left: 47px;
+      padding-right: 47px;
+    }
+
+    &__btn--fb::before,
+    &__btn--inst::before {
+      padding-left: 60px;
+    }
+
+    &__btn--fb,
+    &__btn--inst {
+      padding-left: 60px;
+    }
+
+    &__item ~ &__item {
+      margin-top: 0;
+      margin-left: 30px;
+    }
+
+    &__title svg {
+      top: -34px;
+    }
+  }
+
+  @media (min-width: $viewport--lg) {
+    position: relative;
+
+    &__title {
+      font-size: 36px;
+      font-weight: bold;
+      max-width: 395px;
+    }
+
+    &__title svg {
+      top: -27px;
+      right: 4px;
+    }
+
+    &__inner {
+      padding-top: 124px;
+      padding-bottom: 125px;
+      padding-left: 72px;
+      margin-right: 0;
+      width: calc(50% - 100px);
+    }
+
+    &__contacts {
+      display: block;
+    }
+
+    &__item ~ &__item {
+      margin-left: 0;
+      margin-top: 28px;
+    }
+
+    &__map {
+      position: absolute;
+      top: 0;
+      right: 50%;
+      bottom: 0;
+      left: 0;
+
+      margin-right: -100px;
+      margin-top: 0;
+    }
+
+    &__map iframe {
+      height: 100%;
+    }
+
+    &__social {
+      margin-top: 48px;
+    }
+  }
+}

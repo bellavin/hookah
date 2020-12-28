@@ -1,0 +1,71 @@
+.more {
+  background-image:
+    linear-gradient(to bottom, #30333B, #30333B, rgba(48, 51, 59, 0.51)),
+    url(../img/bg/more-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__inner {
+    padding-top: 44px;
+    padding-bottom: 67px;
+  }
+
+  &__title {
+    margin: 0;
+    color: white;
+    font-size: 22px;
+    line-height: 1.43;
+  }
+
+  &__text {
+    margin-top: 12px;
+    color: #C8CDD8;
+    font-size: 15px;
+    line-height: 1.46;
+  }
+
+  &__btn {
+    margin-top: 39px;
+  }
+
+  @media (min-width: $viewport--md) {
+    background-image: linear-gradient(to right, #30333B, #30333B, rgba(48, 51, 59, 0.51)), url(../img/bg/more-bg.jpg);
+
+    &__inner {
+      display: flex;
+      align-items: center;
+      padding-bottom: 55px;
+    }
+
+    &__right {
+      margin-left: 25px;
+    }
+
+    &__btn {
+      min-width: 274px;
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: $viewport--lg) {
+    &__inner {
+      padding-top: 66px;
+      padding-bottom: 65px;
+    }
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__right {
+      margin-left: auto;
+    }
+
+    &__text {
+      max-width: 685px;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  }
+}
